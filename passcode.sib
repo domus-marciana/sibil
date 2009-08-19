@@ -1,0 +1,11 @@
+#!./sibil
+# A very simple passcode program to demonstrate the if statement
+
+if input("Passcode 1: ") is 10:
+	if input("Passcode 2: ") is 5:
+		print "Access Granted!"
+		exit(0)
+	;;
+;;
+
+print "Access Denied!"

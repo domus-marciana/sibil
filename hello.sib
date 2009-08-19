@@ -1,0 +1,4 @@
+#!./sibil
+# A simple Amanda program that prints Hello, world
+
+print "Hello, world!"
