@@ -31,7 +31,7 @@ void init(BOOL init_ia)
 
 	listVars = (TBLPTR)malloc(sizeof(struct HashTable)*BIGNUM);
 
-	if(interactive) printf("amanda 0.1\nCopyright (C) 2009 Zee Zuo\n>>> ");
+	if(interactive) printf("sibil 0.1\nCopyright (C) 2009 Zee Zuo\n>>> ");
 }
 
 %}
