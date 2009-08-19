@@ -1,0 +1,4 @@
+#!./sibil
+# Takes two numbers as input and prints their sum
+
+print input() + input()
