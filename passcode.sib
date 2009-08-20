@@ -3,9 +3,10 @@
 
 if input("Passcode 1: ") is 10:
 	if input("Passcode 2: ") is 5:
-		print "Access Granted!"
-		exit(0)
+		print "1st Level Access Granted!"
+	else:
+		print "2nd Level Access Granted!"
 	;;
-;;
-
-print "Access Denied!"
+else:
+	print "Access Denied!"
+;; 

@@ -22,8 +22,10 @@ struct HashTable
 
 TBLPTR	listVars;
 int	numVariables;
+/*
 int	stack[BIGNUM];
 int	stackPos;
+*/
 char*	printStack[BIGNUM];
 int	printPos;
 BOOL	ifStack[BIGNUM];
@@ -38,9 +40,6 @@ void clean()
 			free(listVars[i].ptrVal);
 	}
 	free(listVars);
-	numVariables = 0;
-	stackPos = 0;
-	printPos = 0;
 }
 
 void cleanexit(int exitStat)
@@ -48,6 +47,13 @@ void cleanexit(int exitStat)
 	clean();
 	if(interactive) printf("\nBye.\n");
 	exit(exitStat);
+}
+
+void showHelp()
+{
+	printf("SIBIL (Simple Incomplete Basic Instructive Language)\n");
+	printf("Copyright (C) 2009 Zee Zuo\n");
+	printf("Licensed under GNU General Public License v3\n");
 }
 
 /*
@@ -99,6 +105,7 @@ TBLPTR findIndex(const char* str)
 	return NULL;
 }
 
+/*
 void Push(int val)
 {
 //	printf("Push onto stack: %d\n", val);
@@ -110,6 +117,7 @@ int Pop()
 {
 	return stack[--stackPos];
 }
+*/
 
 BOOL ifTop()
 {
