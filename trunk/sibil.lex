@@ -47,14 +47,24 @@ then			return THEN;
 is\ not			return IS_NOT;
 is			return IS;
 else			return ELSE;
-;;			return ENDIF;
+;;			return END;
 and			return AND;
 or			return OR;
 not			return NOT;
+\>=			return GE;
+\<=			return LE;
+\>			return GT;
+\<			return LT;
+sqrt			return SQRT;
+\^			return RAISED_TO;
+while			return WHILE;
+do			return DO;
+help			return HELP;
 
-[1-9][0-9]*|0		yylval.number=atoi(yytext); return NUMBER;
+[1-9][0-9]*|0		yylval.number=atol(yytext); return NUMBER;
 $[a-zA-Z][a-zA-Z0-9]*	yylval.string=strdup(yytext+1); return STRVAR;
 [a-zA-Z][a-zA-Z0-9]*	yylval.string=strdup(yytext); return VARIABLE;
+\\\n			/* IGNORING ESCAPED LF */
 \n			return LF;
 [ \t]+			/* IGNORING WHITESPACE */
 .			return (int)yytext[0];
